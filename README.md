@@ -1,15 +1,15 @@
 # Android Docker Image for GitLab CI
-[![License](http://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Docker Image](https://images.microbadger.com/badges/image/randr0id/gitlab-ci-android.svg)](https://microbadger.com/images/randr0id/gitlab-ci-android)
+[![License](http://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0) [![Docker Image](https://images.microbadger.com/badges/image/smarp/gitlab-ci-android.svg)](https://microbadger.com/images/smarp/gitlab-ci-android)
 
 _A Docker image for building and testing Android apps with GitLab CI._
 
 This Docker image contains the Android SDK and common packages required for building and testing Android apps with GitLab CI.
 
-Builds are available at Docker Hub: [https://hub.docker.com/r/randr0id/gitlab-ci-android/](https://hub.docker.com/r/randr0id/gitlab-ci-android/)
+Builds are available at Docker Hub: [https://hub.docker.com/r/smarp/gitlab-ci-android/](https://hub.docker.com/r/smarp/gitlab-ci-android/)
 
 ## Usage
 ~~~
-image: randr0id/gitlab-ci-android
+image: smarp/gitlab-ci-android
 
 cache:
   key: ${CI_PROJECT_ID}
@@ -17,8 +17,8 @@ cache:
     - .gradle/
 
 stages:
-  - test
   - build
+  - test
 
 before_script:
   - export GRADLE_USER_HOME=$(pwd)/.gradle 
